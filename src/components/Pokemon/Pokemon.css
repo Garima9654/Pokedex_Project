@@ -1,0 +1,35 @@
+.pokemon{
+    border: 1px solid black;
+    flex-basis: 20%;
+    /* padding: 20px; */
+    /* height: 400px; */
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #FFAF45;
+    border-radius: 5%;
+}
+
+.pokemon-img{
+height: 150px;
+max-height: 80%;
+}
+
+.name{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+.image{
+    background-color: #FFF455;
+    padding: 5px;
+}
+
+.card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

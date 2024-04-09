@@ -10,10 +10,13 @@ function PokemonList() {
 
   async function downloadPokemon() {
     const response = await axios.get(POKEDEX_URL);
+
     const pokemonResults = response.data.results;
+
     const pokemonPromise = pokemonResults.map((pokemon) =>
       axios.get(pokemon.url)
     );
+
     const pokemmonData = await axios.all(pokemonPromise);
 
     const res = pokemmonData.map((pokeData) => {
@@ -36,12 +39,17 @@ function PokemonList() {
   }, []);
   return (
     <div className="pokemon-list-wrapper">
-      <div>List of Pokemons</div>
-      {isLoading
-        ? "Loading...."
-        : PokemonList.map((p) => (
-            <Pokemon name={p.name} image={p.image} key={p.id} />
-          ))}
+      <div className="pokemon-wrapper">
+        {isLoading
+          ? "Loading...."
+          : PokemonList.map((p) => (
+              <Pokemon name={p.name} image={p.image} key={p.id} />
+            ))}
+      </div>
+      <div className="controls">
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
     </div>
   );
 }

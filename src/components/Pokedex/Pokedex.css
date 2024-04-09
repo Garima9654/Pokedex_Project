@@ -1,7 +1,6 @@
 .pokedex-wrapper{
     display: flex;
     flex-direction: column;
-    /* width: 1000px; */
 }
 
 #pokedex-heading{
@@ -9,3 +8,4 @@
     letter-spacing: 5px;
     font-weight: bold;
 }
+
